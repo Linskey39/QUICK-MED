@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ruleset name="Ambulance Booking System">
+    <description>PHP CodeSniffer configuration for Ambulance Booking System</description>
+
+    <!-- Check PHP files -->
+    <file>./*.php</file>
+    <file>./admin/*.php</file>
+    <file>./user/*.php</file>
+    <file>./provider/*.php</file>
+    <file>./includes/*.php</file>
+
+    <!-- Exclude vendor and PHPMailer -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/PHPMailer/*</exclude-pattern>
+    <exclude-pattern>*/backups/*</exclude-pattern>
+
+    <!-- Use PSR-12 coding standard -->
+    <rule ref="PSR12"/>
+
+    <!-- Indentation: 4 spaces -->
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="indent" value="4"/>
+        </properties>
+    </rule>
+
+    <!-- Allow short array syntax -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+</ruleset>
+
